@@ -1,9 +1,10 @@
-<html>
-  <head>
-    <title>Rafael Luque</title>
-  </head>
-  <body>
-    <h1>Rafael Luque</h1>
-    <p>CTO and Co-founder of <a href="http://www.osoco.es/">OSOCO</a></p>
-  </body>
-</html>
+---
+layout: default
+title: Rafael Luque
+---
+{% for post in site.posts limit: 5 %}
+  <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+  <p>{{ post.content }}</p>
+  <em>Posted on {{ post.date | date_to_long_string}}.</em>
+{% endfor %}
+
